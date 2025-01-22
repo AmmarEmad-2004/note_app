@@ -19,7 +19,9 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: Scaffold(
+        
+      ),
     );
   }
 }
