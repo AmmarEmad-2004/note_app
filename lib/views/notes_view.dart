@@ -16,7 +16,10 @@ class NotesView extends StatelessWidget {
             showModalBottomSheet(
               context: context,
               builder: (context) {
-                return const AddNoteBottomSheet();
+                return const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
+                  child: AddNoteBottomSheet(),
+                );
               },
             );
           },
@@ -28,4 +31,3 @@ class NotesView extends StatelessWidget {
         body: const NotesViewBody());
   }
 }
-
