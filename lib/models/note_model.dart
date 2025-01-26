@@ -12,7 +12,7 @@ class NoteModel {
   @HiveField(2)
   final String date;
   @HiveField(3)
-  final int color;
+  final double color;
 
   NoteModel(
       {required this.title,

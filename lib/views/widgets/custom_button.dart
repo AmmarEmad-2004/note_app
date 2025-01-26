@@ -4,8 +4,11 @@ import 'package:notes_app/constants.dart';
 class CustomBottom extends StatelessWidget {
   const CustomBottom({
     super.key,
-    required this.buttonText, this.onTap,
+    required this.buttonText,
+    this.onTap,
+    this.isLoading = false,
   });
+  final bool isLoading;
   final String buttonText;
   final void Function()? onTap;
   @override
@@ -20,10 +23,19 @@ class CustomBottom extends StatelessWidget {
         width: double.infinity,
         height: 55,
         child: Center(
-          child: Text(
-            buttonText,
-            style: const TextStyle(fontSize: 30, color: Colors.black),
-          ),
+          child: isLoading
+              ? const SizedBox(
+                  height: 45,
+                  width: 45,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 6,
+                    color: Colors.black,
+                  ),
+                )
+              : Text(
+                  buttonText,
+                  style: const TextStyle(fontSize: 30, color: Colors.black),
+                ),
         ),
       ),
     );
