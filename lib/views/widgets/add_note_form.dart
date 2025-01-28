@@ -57,10 +57,12 @@ class _AddNoteFormState extends State<AddNoteForm> {
                         color: Colors.blue.b);
                     BlocProvider.of<AddNoteCubitCubit>(context)
                         .addNote(noteModel);
+                        
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
                   }
+                  
                 },
               );
             },
